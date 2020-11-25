@@ -2,10 +2,14 @@
 
 node {
   
-  stage('Test') {
+  stage('nous allons clone'){
+    git 'https://github.com/pratiquedevops/projet-flask.git'
+  }
+  stage('Nous testons ') {
   
    sh ' echo "c est cool les gars, vous etes des survivants!!" '
-   sh 'python3 //github.com/pratiquedevops/projet-flask/run.py'
+   sh 'chmod 777 run.py'
+   sh 'python3 run.py'
 
   }
 }
